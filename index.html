@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сократика</title>
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <div class="logo__icon">
+          <img src="./img/logo.svg" alt="Сократика">
+        </div>
+        <div class="logo__name">Сократика</div>
+      </div>
+    </div>
+  </header>
+  <section class="lessonForm">
+    <div class="container">
+      <div class="lessonForm__body">
+        <div class="lessonForm__illustration">
+          <img src="./img/Illustration.svg" alt="Сократика - форма">
+        </div>
+        <div class="formStep">
+
+          <div class="formStep__title">01 Заполни форму</div>
+          <form action="#" id="lessonFormStep1">
+            <div class="formStep__groupFields">
+
+              <div class="formStep__field">
+                <label class="formStep__label">Тема урока</label>
+                <input type="text" name="lessonTheme" class="formStep__input" placeholder="Напиши что-то конкретное" />
+              </div>
+
+              <div class="formStep__field">
+                <label class="formStep__label">Класс</label>
+
+                <div class="dropdownSelect">
+                  <div class="dropdownSelect__field">
+                    <div class="dropdownSelect__selectedOption">1</div>
+                    <div class="dropdownSelect__btn">
+                      <img src="./img/arrow-down.svg" alt="Сократика - Классы">
+                    </div>
+                  </div>
+                  <ul class="dropdownSelect__menu">
+                    <li data-value="1" class="dropdownSelect__option dropdownSelect__option_checked">1</li>
+                    <li data-value="2" class="dropdownSelect__option">2</li>
+                    <li data-value="3" class="dropdownSelect__option">3</li>
+                    <li data-value="4" class="dropdownSelect__option">4</li>
+                    <li data-value="5" class="dropdownSelect__option">5</li>
+                  </ul>
+
+                  <select class="dropdownSelect__selectOriginal">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="formStep__tips">
+              <ul class="formStep__tipsList">
+                <li class="formStep__tipsItem" data-for="lessonTheme">Генетика</li>
+                <li class="formStep__tipsItem" data-for="lessonTheme">Анатомия человека</li>
+                <li class="formStep__tipsItem" data-for="lessonTheme">Вулканы</li>
+                <li class="formStep__tipsItem" data-for="lessonTheme">Зимние виды спорта</li>
+                <li class="formStep__tipsItem" data-for="lessonTheme">Радуга</li>
+                <li class="formStep__tipsItem" data-for="lessonTheme">Индийская культура</li>
+              </ul>
+              <a class="formStep__tipsMore">
+                Показать больше вариантов
+              </a>
+            </div>
+
+            <div class="formStep__fieldWithCount">
+              <div class="formStep__field">
+                <label class="formStep__label">Цель урока</label>
+                <textarea name="lessonGoal" class="formStep__textarea" placeholder="Напиши своюучебную цель"></textarea>
+              </div>
+              <div class="formStep__fieldFooter">
+                <div class="formStep__fieldMessage"></div>
+                <div class="formStep__symbolsCount">
+                  <span class="formStep__currentSymbols">0</span>
+                  /
+                  <span class="formStep__maxSymbols">200</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="formStep__groupBtns">
+              <button type="button" class="formStep__btn formStep__btn_outline">Назад</button>
+              <button type="button" disabled class="formStep__btn formStep__nextStep formStep__btn_disable">Следующий шаг</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

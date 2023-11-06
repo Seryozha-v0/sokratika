@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter-Regular.ttf") format("truetype"),
+    url("../fonts/inter/Inter-Regular.woff") format("woff"),
+    url("../fonts/inter/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter-Medium.ttf") format("truetype"),
+    url("../fonts/inter/Inter-Medium.woff") format("woff"),
+    url("../fonts/inter/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter/Inter-SemiBold.ttf") format("truetype"),
+    url("../fonts/inter/Inter-SemiBold.woff") format("woff"),
+    url("../fonts/inter/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/robotoSlab/RobotoSlab-Bold.ttf") format("truetype"),
+    url("../fonts/robotoSlab/RobotoSlab-Bold.woff") format("woff"),
+    url("../fonts/robotoSlab/RobotoSlab-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/robotoSlab/RobotoSlab-ExtraBold.ttf") format("truetype"),
+    url("../fonts/robotoSlab/RobotoSlab-ExtraBold.woff") format("woff"),
+    url("../fonts/robotoSlab/RobotoSlab-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Regular.ttf") format("truetype"),
+    url("../fonts/gilroy/Gilroy-Regular.woff") format("woff"),
+    url("../fonts/gilroy/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "IRANYeken";
+  src: url("../fonts/iranyekan/IRANYekan.ttf") format("truetype"),
+    url("../fonts/iranyekan/IRANYekan.woff") format("woff"),
+    url("../fonts/iranyekan/IRANYekan.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/iranyekan/IRANYekan.ttf") format("truetype"),
+    url("../fonts/iranyekan/IRANYekan.woff") format("woff"),
+    url("../fonts/iranyekan/IRANYekan.woff2") format("woff2");
+  font-weight: 400;
+}

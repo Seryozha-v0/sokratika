@@ -1,0 +1,486 @@
+:root {
+  --text-primary: #343434;
+  --text-tertiary: #9A9A9A;
+  --light-gray-lines: #EAEAEA;
+  --light-gray-bg: #EEEFF0;
+  --Dark-blue: #3CA9F0;
+  --errorRed: #EF5579;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.formStep__input:focus-within,
+.formStep__select:focus-within,
+.formStep__textarea:focus-within {
+  outline: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  min-width: 320px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+header {
+  padding: 60px 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo .logo__icon {
+  flex-shrink: 0;
+  width: 43px;
+  height: 40px;
+}
+
+.logo .logo__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo .logo__name {
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  padding-left: 10px;
+}
+
+.lessonForm {
+  padding: 50px 0;
+}
+
+.lessonForm .lessonForm__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lessonForm .lessonForm__illustration {
+  width: 658px;
+  height: 658px;
+}
+
+.lessonForm .lessonForm__illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.formStep {
+  width: 775px;
+  margin-top: 39px;
+}
+
+.formStep .formStep__title {
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.formStep form {
+  margin-top: 50px;
+}
+
+.formStep .formStep__field {
+  position: relative;
+  margin-top: 10px;
+  padding: 0 15px;
+  border: 1px solid var(--light-gray-lines);
+  border-radius: 10px;
+  transition: .2s;
+}
+
+.formStep .formStep__field:has(.formStep__input:focus, .formStep__textarea:focus, .dropdownSelect__menu_open) {
+  border: 1px solid var(--Dark-blue);
+}
+
+.formStep .formStep__clear {
+  position: relative;
+  width: 24px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.formStep .formStep__clear:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/clear.svg") center center no-repeat;
+  transform: translateY(-50%);
+}
+
+
+.formStep .formStep__field:has(.formStep__clear) {
+  display: flex;
+}
+
+.formStep .formStep__label {
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 20px;
+  padding: 0 5px;
+  background: #fff;
+  transform: translateY(50%);
+  color: var(--text-primary);
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  transition: .2s;
+}
+
+.formStep .formStep__field:has(.formStep__input:focus, .formStep__textarea:focus, .dropdownSelect__menu_open) .formStep__label {
+  color: var(--Dark-blue);
+}
+
+.formStep .formStep__input,
+.formStep .formStep__textarea {
+  border: none;
+  padding: 18px 0;
+  width: 100%;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.formStep .formStep__input:focus-within {
+  outline: none;
+}
+
+.formStep .formStep__groupFields {
+  display: grid;
+  grid-template-columns: 85% 1fr;
+  gap: 16px;
+}
+
+.formStep .formStep__tips {
+  margin-top: 20px;
+}
+
+.formStep .formStep__tipsList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.formStep .formStep__tipsItem {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 10px 16px;
+  background: var(--light-gray-bg);
+  border-radius: 100px;
+  color: var(--Black---text-primary);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.formStep .formStep__tipsMore {
+  position: relative;
+  margin-top: 12px;
+  padding-left: 22px;
+  color: var(--Dark-blue);
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.formStep .formStep__tipsMore:before,
+.formStep .formStep__tipsMore:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--Dark-blue);
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 2px;
+}
+
+.formStep .formStep__tipsMore:after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.formStep__fieldWithCount {
+  margin-top: 37px;
+}
+
+.formStep__fieldWithCount.formStep__fieldWithCount_error .formStep__field {
+  border: 1px solid var(--errorRed);
+}
+
+.formStep__fieldWithCount.formStep__fieldWithCount_error .formStep__label {
+  color: var(--errorRed);
+}
+
+.formStep__fieldWithCount.formStep__fieldWithCount_error .formStep__symbolsCount {
+  color: var(--errorRed);
+}
+
+.formStep .formStep__textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.formStep .formStep__fieldFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.formStep .formStep__fieldMessage {
+  color: var(--errorRed);
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.formStep .formStep__symbolsCount {
+  text-align: right;
+  color: var(--text-primary);
+  text-align: right;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.formStep .formStep__groupBtns {
+  display: flex;
+}
+
+.formStep .formStep__btn {
+  margin-top: 10px;
+  margin-right: 15px;
+  padding: 18px 52px;
+  border: none;
+  border-radius: 12px;
+  background: var(--Dark-blue);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  color: #fff;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.formStep .formStep__btn.formStep__btn_disable {
+  background: var(--light-gray-bg);
+  color: var(--text-tertiary);
+  box-shadow: none;
+  cursor: auto;
+}
+
+.formStep .formStep__btn.formStep__btn_outline {
+  color: var(--Dark-blue);
+  border: 1px solid var(--Dark-blue);
+  background: #fff;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.dropdownSelect .dropdownSelect__selectOriginal {
+  display: none;
+}
+
+.dropdownSelect .dropdownSelect__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  color: var(--text-primary);
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.dropdownSelect .dropdownSelect__btn {
+  transition: .4s;
+}
+
+.dropdownSelect .dropdownSelect__btn.dropdownSelect__btn_active {
+  transform: rotate(180deg);
+}
+
+.dropdownSelect .dropdownSelect__menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 12px;
+  border: 1.25px solid #EAEAEA;
+  background: #FFF;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+  opacity: 0;
+  transition: 1s;
+}
+
+.dropdownSelect .dropdownSelect__menu.dropdownSelect__menu_open {
+  display: block;
+  animation: menuOpen .4s 1 forwards;
+}
+
+@keyframes menuOpen {
+  to {
+    opacity: 1;
+  }
+}
+
+.dropdownSelect .dropdownSelect__option {
+  position: relative;
+  padding: 10px 16px;
+  color: var(--Black---text-primary);
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.dropdownSelect .dropdownSelect__option:hover {
+  background: #ededed;
+}
+
+.dropdownSelect .dropdownSelect__option:first-child {
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+}
+
+.dropdownSelect .dropdownSelect__option:last-child {
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.dropdownSelect .dropdownSelect__option.dropdownSelect__option_checked {
+  color: var(--Black---text-primary);
+  font-weight: 600;
+  padding-right: calc(24px + 16px);
+}
+
+.dropdownSelect .dropdownSelect__option.dropdownSelect__option_checked:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url("../img/checked.svg") center center/contain no-repeat;
+}
+
+@media (max-width: 1440px) {
+  .formStep .formStep__groupFields {
+    grid-template-columns: 80% 1fr;
+  }
+
+  .formStep {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .lessonForm {
+    padding: 15px 0;
+  }
+
+  .lessonForm .lessonForm__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lessonForm .lessonForm__illustration {
+    width: 220px;
+    height: auto;
+  }
+
+  .formStep {
+    margin-top: 0;
+  }
+
+  .formStep form {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .formStep .formStep__groupFields {
+    grid-template-columns: 1fr;
+  }
+
+  .formStep .formStep__groupFields .formStep__field:first-child {
+    grid-row: 2;
+  }
+
+  .formStep .formStep__groupBtns {
+    flex-direction: column;
+  }
+
+  .formStep .formStep__btn {
+    margin-right: 0;
+    margin-top: 15px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .formStep .formStep__title {
+    font-size: 36px;
+  }
+
+  .formStep .formStep__tipsMore {
+    font-size: 16px;
+  }
+
+  .formStep .formStep__input, .formStep .formStep__textarea {
+    font-size: 16px;
+  }
+
+  .formStep .formStep__tipsItem {
+    font-size: 14px;
+    margin-right: 4px;
+    padding: 8px 14px;
+  }
+}
